@@ -1,13 +1,13 @@
 package com.example.demo.entity;
 
+import java.sql.Time; 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.format.datetime.standard.DateTimeContext;
 
 import com.sun.istack.NotNull;
 
@@ -26,19 +26,19 @@ public class ShowTime
 	private int id;
 	@NotNull
 	@Column(name = "stime")
-	private DateTimeContext sTime;
+	private Time sTime;
+	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public DateTimeContext getsTime() {
+	public Time getsTime() {
 		return sTime;
 	}
-	public void setsTime(DateTimeContext sTime) {
+	public void setsTime(Time sTime) {
 		this.sTime = sTime;
 	}
-	
-	
+		
 }

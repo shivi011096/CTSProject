@@ -1,6 +1,6 @@
 package com.example.demo.entity;
 
-import javax.persistence.Column;
+import javax.persistence.Column; 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -44,18 +44,18 @@ public class Theater
     @JsonIgnore
     private City city;
 	
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "movie_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
-    private Movie movie;
-	
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "showtime_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
-    private ShowTime showtime;
-	
+//	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+//    @JoinColumn(name = "movie_id", nullable = false)
+//    @OnDelete(action = OnDeleteAction.CASCADE)
+//    @JsonIgnore
+//    private Movie movie;
+//	
+//	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+//    @JoinColumn(name = "showtime_id", nullable = false)
+//    @OnDelete(action = OnDeleteAction.CASCADE)
+//    @JsonIgnore
+//    private ShowTime showtime;
+//	
 	public int getId() {
 		return id;
 	}
@@ -88,21 +88,21 @@ public class Theater
 		this.city = city;
 	}
 
-	public Movie getMovie() {
-		return movie;
-	}
-
-	public void setMovie(Movie movie) {
-		this.movie = movie;
-	}
-
-	public ShowTime getShowtime() {
-		return showtime;
-	}
-
-	public void setShowtime(ShowTime showtime) {
-		this.showtime = showtime;
-	}
+//	public Movie getMovie() {
+//		return movie;
+//	}
+//
+//	public void setMovie(Movie movie) {
+//		this.movie = movie;
+//	}
+//
+//	public ShowTime getShowtime() {
+//		return showtime;
+//	}
+//
+//	public void setShowtime(ShowTime showtime) {
+//		this.showtime = showtime;
+//	}
 	
 	
 
