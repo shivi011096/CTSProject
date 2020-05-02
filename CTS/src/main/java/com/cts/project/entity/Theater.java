@@ -1,6 +1,6 @@
-package com.example.demo.entity;
+package com.cts.project.entity;
 
-import javax.persistence.Column; 
+import javax.persistence.Column;  
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -34,28 +34,20 @@ public class Theater
 	@Column(name = "tcode",unique = true)
 	private String tCode;
 	@NotNull
-    @Size(max = 100)
 	@Column(name = "tname")
 	private String tName;
+	@NotNull
+	@Column(name = "taddress")
+	private String tAddress;
 	
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "city_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
-    private City city;
 	
 //	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-//    @JoinColumn(name = "movie_id", nullable = false)
+//    @JoinColumn(name = "city_id", nullable = false)
 //    @OnDelete(action = OnDeleteAction.CASCADE)
 //    @JsonIgnore
-//    private Movie movie;
-//	
-//	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-//    @JoinColumn(name = "showtime_id", nullable = false)
-//    @OnDelete(action = OnDeleteAction.CASCADE)
-//    @JsonIgnore
-//    private ShowTime showtime;
-//	
+//    private City city;
+
+	
 	public int getId() {
 		return id;
 	}
@@ -80,45 +72,13 @@ public class Theater
 		this.tName = tName;
 	}
 
-	public City getCity() {
-		return city;
+	public String gettAddress() {
+		return tAddress;
 	}
 
-	public void setCity(City city) {
-		this.city = city;
+	public void settAddress(String tAddress) {
+		this.tAddress = tAddress;
 	}
-
-//	public Movie getMovie() {
-//		return movie;
-//	}
-//
-//	public void setMovie(Movie movie) {
-//		this.movie = movie;
-//	}
-//
-//	public ShowTime getShowtime() {
-//		return showtime;
-//	}
-//
-//	public void setShowtime(ShowTime showtime) {
-//		this.showtime = showtime;
-//	}
-	
-	
-
-	
-//	public Theater(String tCode, String tName, int cId, String mCode, DateTimeContext sTime) 
-//	{
-//		super();
-//		this.tCode = tCode;
-//		this.tName = tName;
-//		this.cCode = cCode;
-//		this.mCode = mCode;
-//		this.sTime = sTime;
-//	}
-
-	
-	
-	
+		
 
 }
